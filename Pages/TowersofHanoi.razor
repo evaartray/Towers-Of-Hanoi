@@ -1,0 +1,50 @@
+@page "/towersOfHanoi"
+
+<h1>Towers of Hanoi</h1>
+
+<div>
+    <svg class="towers" id="towerA" height="210" width="500" style=@color1>
+        <line x1="30" y1="0" x2="30" y2="150" stroke=rgb(0,0,0) stroke-width="10" @onclick='(() => TowerClick("towerA"))'/>
+        <line x1="0" y1="150" x2="60" y2="150" stroke=rgb(0,0,0) stroke-width="10" @onclick='(() => TowerClick("towerA"))'/>
+
+        <svg class="towers" id="towerB" height="210" width="500" style=@color2 @onclick='(() => TowerClick("towerB"))'>
+            <line x1="130" y1="0" x2="130" y2="150" stroke=rgb(0,0,0) stroke-width="10" />
+            <line x1="100" y1="150" x2="160" y2="150" stroke=rgb(0,0,0) stroke-width="10"/>
+        </svg>
+
+        <svg class="towers" id="towerC" height="210" width="500" style=@color3 @onclick='(() => TowerClick("towerC"))'>
+            <line x1="230" y1="0" x2="230" y2="150" stroke=rgb(0,0,0) stroke-width="10" />
+            <line x1="200" y1="150" x2="260" y2="150" stroke=rgb(0,0,0) stroke-width="10"/>
+        </svg>
+
+    </svg>
+
+</div>
+
+
+
+
+
+@code {
+    private static string newColor = "stroke=rgb(0,0,255);";
+    private static string defaultColor = "stroke=rgb(0,0,0);";
+    private string color1, color2, color3;
+
+    private void TowerClick(string tower)
+    {
+        color1 = defaultColor;
+        color2 = defaultColor;
+        color3 = defaultColor;
+
+        if(tower=="towerA") {
+            color1 = newColor;
+        }
+        else if(tower=="towerB") {
+            color2 = newColor;
+        }
+        else if (tower=="towerC") {
+            color3 = newColor;
+        }
+    }
+}
+

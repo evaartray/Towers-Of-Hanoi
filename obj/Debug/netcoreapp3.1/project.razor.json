@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\blazorserver02.csproj",
+  "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\blazorserver02.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14706,59 +14706,59 @@
   "RootNamespace": "blazorserver02",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\Shared\\MainLayout.razor",
+      "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\Shared\\MainLayout.razor",
       "TargetPath": "Shared\\MainLayout.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\Shared\\NavMenu.razor",
-      "TargetPath": "Shared\\NavMenu.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\Pages\\Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\Pages\\_Host.cshtml",
-      "TargetPath": "Pages\\_Host.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\App.razor",
-      "TargetPath": "App.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\Pages\\Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\Pages\\Index.razor",
-      "TargetPath": "Pages\\Index.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\Shared\\SurveyPrompt.razor",
-      "TargetPath": "Shared\\SurveyPrompt.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\Pages\\TowersofHanoi.razor",
-      "TargetPath": "Pages\\TowersofHanoi.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\_Imports.razor",
+      "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\_Imports.razor",
       "TargetPath": "_Imports.razor",
       "FileKind": "componentImport"
     },
     {
-      "FilePath": "c:\\Users\\pzx98720\\blazorserver02\\Pages\\FetchData.razor",
+      "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\Shared\\SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\Pages\\TowersofHanoi.razor",
+      "TargetPath": "Pages\\TowersofHanoi.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\Pages\\_Host.cshtml",
+      "TargetPath": "Pages\\_Host.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\Pages\\Counter.razor",
+      "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\Pages\\FetchData.razor",
       "TargetPath": "Pages\\FetchData.razor",
       "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\Shared\\NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\Pages\\Index.razor",
+      "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Aiymkan\\blazorserver02\\Pages\\Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"

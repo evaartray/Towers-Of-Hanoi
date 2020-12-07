@@ -1,50 +1,73 @@
 @page "/towersOfHanoi"
+@using Data
 
 <h1>Towers of Hanoi</h1>
 
 <div>
-    <svg class="towers" id="towerA" height="210" width="500" style=@color1>
-        <line x1="30" y1="0" x2="30" y2="150" stroke=rgb(0,0,0) stroke-width="10" @onclick='(() => TowerClick("towerA"))'/>
-        <line x1="0" y1="150" x2="60" y2="150" stroke=rgb(0,0,0) stroke-width="10" @onclick='(() => TowerClick("towerA"))'/>
+    <svg height="210" width="500">
+        <line x1="30" y1="0" x2="30" y2="150" stroke-width="15"
+            stroke=@color1 @onclick='(() => TowerClick("towerA"))'/>
+        <line x1="0" y1="150" x2="60" y2="150" stroke-width="15"
+            stroke=@color1 @onclick='(() => TowerClick("towerA"))'/>>
 
-        <svg class="towers" id="towerB" height="210" width="500" style=@color2 @onclick='(() => TowerClick("towerB"))'>
-            <line x1="130" y1="0" x2="130" y2="150" stroke=rgb(0,0,0) stroke-width="10" />
-            <line x1="100" y1="150" x2="160" y2="150" stroke=rgb(0,0,0) stroke-width="10"/>
+        <svg height="210" width="500">
+            <line x1="130" y1="0" x2="130" y2="150" stroke-width="15"
+                stroke=@color2 @onclick='(() => TowerClick("towerB"))'/>
+            <line x1="100" y1="150" x2="160" y2="150" stroke-width="15"
+                stroke=@color2 @onclick='(() => TowerClick("towerB"))'/>
         </svg>
 
-        <svg class="towers" id="towerC" height="210" width="500" style=@color3 @onclick='(() => TowerClick("towerC"))'>
-            <line x1="230" y1="0" x2="230" y2="150" stroke=rgb(0,0,0) stroke-width="10" />
-            <line x1="200" y1="150" x2="260" y2="150" stroke=rgb(0,0,0) stroke-width="10"/>
+        <svg height="210" width="500">
+            <line x1="230" y1="0" x2="230" y2="150" stroke-width="15"
+                stroke=@color3 @onclick='(() => TowerClick("towerC"))'/>
+            <line x1="200" y1="150" x2="260" y2="150" stroke-width="15"
+                stroke=@color3 @onclick='(() => TowerClick("towerC"))'/>
         </svg>
-
     </svg>
+    <submit class="btn btn-success" @onclick='(()=>InitialState())'>1</submit>
+    <submit class="btn btn-success" @onclick='(()=>AfterActionTower())'>2</submit>
 
 </div>
 
-
-
-
-
 @code {
-    private static string newColor = "stroke=rgb(0,0,255);";
-    private static string defaultColor = "stroke=rgb(0,0,0);";
-    private string color1, color2, color3;
-
+    private static string newColor = "#007bff";
+    private static string defaultColor = "#000000";
+    private string color1 = defaultColor, color2 = defaultColor, color3 = defaultColor;
+    private static HanoiGame h = new HanoiGame();
+    private static HanoiTower t = new HanoiTower(h);
     private void TowerClick(string tower)
     {
         color1 = defaultColor;
         color2 = defaultColor;
         color3 = defaultColor;
 
-        if(tower=="towerA") {
+        if(tower == "towerA") {
             color1 = newColor;
         }
-        else if(tower=="towerB") {
+        else if(tower == "towerB") {
             color2 = newColor;
         }
-        else if (tower=="towerC") {
+        else if (tower == "towerC") {
             color3 = newColor;
         }
+    }
+    private void InitialState()
+    {
+        h = new HanoiGame();
+        t = new HanoiTower(h);
+        h.addTower(t);
+        t.pushDisk(new HanoiDisk(6,"orange"));
+        t.pushDisk(new HanoiDisk(4,"blue"));
+        t.pushDisk(new HanoiDisk(2,"yellow"));
+        h.addTower(new HanoiTower(h));
+        h.addTower(new HanoiTower(h));
+        h.toConsole();
+    }
+    private void AfterActionTower()
+    {
+        h.getTower(1).pushDisk(h.getTower(0).popDisk());
+        h.getTower(2).pushDisk(h.getTower(0).popDisk());
+        h.toConsole();
     }
 }
 
